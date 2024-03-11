@@ -5,15 +5,23 @@
 Датасет подготовлен с использованием ноутбука Plato-dataset.ipynb.
 Исходные тексты диалогов содержатся в папке Plato_dialogs.
 Все необходимые файлы и каталоги содержатся в папке sokrat_bot_generative.
-Для запуска модели следует использовать ноутбук Sokrat_bot_generative.ipynb (в Сolab). При этом необходимо указать путь к каталогу sokrat_bot_generative.
-Обученная модель находится в папке checkpoint-500 (https://drive.google.com/drive/folders/12nguZDKExLzxrJkEX0Em0MkI97H7g8gY?usp=sharing).
+Для обучения модели следует использовать ноутбук Sokrat_bot_generative.ipynb (в Сolab). При этом необходимо указать путь к каталогу sokrat_bot_generative.
+Обученную модель адаптеров следует поместить в папку sokrat_bot_generative/checkpoint-500 
+Обученную модель адаптеров можно скачать отсюда:
+https://drive.google.com/drive/folders/12nguZDKExLzxrJkEX0Em0MkI97H7g8gY?usp=sharing
+
 В качестве веб-сервиса использована программа Gradio. Для работы с веб-сервисом следует ввести веб-адрес, выданный программой, в строку браузера. 
 
-Requirements: Colab, видеокарта Т4.
+Для запуска программы можно использовать ноутбук Sokrat-inference.ipynb или скрипт sokrat-inference.py, предварительно установив все необходимые библиотеки.
+
+Requirements: Colab, GPU.
 Библиотеки, необходимые для работы:
-accelerate, faiss-gpu, gc, gradio, matplotlib, numpy, pandas, random, torch, tqdm, trl==0.4.7, typing, transformers.
+accelerate, bitsandbytes, faiss-gpu, gc, gradio, matplotlib, numpy, pandas, random, torch, tqdm, trl, transformers.
 
 !pip install -q -U bitsandbytes
 !pip install -q -U git+https://github.com/huggingface/accelerate.git
+!pip install accelerate
 !pip install faiss-gpu
+!pip install trl==0.4.7
+!pip install gradio
 
